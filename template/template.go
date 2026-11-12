@@ -14,7 +14,7 @@ import (
 	"strings"
 	"unicode/utf8"
 
-	"github.com/sectui/operations"
+	"github.com/anotherhadi/operations"
 )
 
 type Span struct{ Start, End int }

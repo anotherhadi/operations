@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/sectui/operations"
+	"github.com/anotherhadi/operations"
 )
 
 func TestRender(t *testing.T) {

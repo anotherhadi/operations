@@ -7,7 +7,7 @@ import (
 	"strings"
 	"unicode/utf8"
 
-	"github.com/sectui/operations"
+	"github.com/anotherhadi/operations"
 )
 
 func usage() string {

@@ -14,8 +14,8 @@ import (
 
 	"github.com/spf13/pflag"
 
-	"github.com/sectui/operations"
-	"github.com/sectui/operations/template"
+	"github.com/anotherhadi/operations"
+	"github.com/anotherhadi/operations/template"
 )
 
 // Set with -ldflags "-X main.version=1.2.3".

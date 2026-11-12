@@ -7,31 +7,31 @@
 
 Data transformations in the spirit of CyberChef: encodings, hashes, AES, JWT,
 text and extractors. A Go library, the `ops` command, and an `op{text}` template
-syntax. Part of the **sectui** tools.
+syntax. Part of the [foam](https://github.com/anotherhadi/foam) tools.
 
 ## Install
 
 With go:
 
 ```sh
-go install github.com/sectui/operations/cmd/ops@latest
+go install github.com/anotherhadi/operations/cmd/ops@latest
 ```
 
-With Nix, from the [sectui NUR](https://github.com/sectui/nur):
+With Nix, from the [anotherhadi NUR](https://github.com/anotherhadi/nur):
 
 ```sh
-nix run github:sectui/nur#operations -- to-base64 hello
+nix run github:anotherhadi/nur#operations -- to-base64 hello
 ```
 
 ```nix
-# flake: inputs.nur-sectui.url = "github:sectui/nur";
-environment.systemPackages = [ nur-sectui.packages.${system}.operations ];
+# flake: inputs.nur-anotherhadi.url = "github:anotherhadi/nur";
+environment.systemPackages = [ nur-anotherhadi.packages.${system}.operations ];
 
 # or through NUR
-environment.systemPackages = [ pkgs.nur.repos.sectui.operations ];
+environment.systemPackages = [ pkgs.nur.repos.anotherhadi.operations ];
 ```
 
-Each [GitHub release](https://github.com/sectui/operations/releases) has an
+Each [GitHub release](https://github.com/anotherhadi/operations/releases) has an
 archive per platform (Linux, macOS, Windows and FreeBSD, amd64 and arm64) with
 the `ops` binary and its shell completions, and a `SHA256SUMS` file:
 
@@ -59,7 +59,7 @@ the operation failed, `2` usage error.
 ## Library
 
 ```go
-import "github.com/sectui/operations"
+import "github.com/anotherhadi/operations"
 
 out, err := operations.Run("to-hex", []byte("hi"), operations.Args{"delimiter": "colon"}) // 68:69
 
@@ -77,7 +77,7 @@ for _, op := range operations.All() {
 ## Templates
 
 ```go
-import "github.com/sectui/operations/template"
+import "github.com/anotherhadi/operations/template"
 
 template.RenderText("hi to-base64{hadi}")           // hi aGFkaQ==
 template.RenderText("to-hex(delimiter=colon){hi}")  // 68:69

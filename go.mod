@@ -1,4 +1,4 @@
-module github.com/sectui/operations
+module github.com/anotherhadi/operations
 
 go 1.26.7
 

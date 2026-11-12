@@ -5,7 +5,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/sectui/operations"
+	"github.com/anotherhadi/operations"
 )
 
 var shells = []string{"bash", "zsh", "fish"}
