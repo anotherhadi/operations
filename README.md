@@ -17,14 +17,14 @@ With go:
 go install github.com/anotherhadi/operations/cmd/ops@latest
 ```
 
-With Nix, from the [anotherhadi NUR](https://github.com/anotherhadi/nur):
+With Nix, from the [anotherhadi NUR](https://github.com/anotherhadi/nur-packages):
 
 ```sh
-nix run github:anotherhadi/nur#operations -- to-base64 hello
+nix run github:anotherhadi/nur-packages#operations -- to-base64 hello
 ```
 
 ```nix
-# flake: inputs.nur-anotherhadi.url = "github:anotherhadi/nur";
+# flake: inputs.nur-anotherhadi.url = "github:anotherhadi/nur-packages";
 environment.systemPackages = [ nur-anotherhadi.packages.${system}.operations ];
 
 # or through NUR
